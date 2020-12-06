@@ -1,12 +1,13 @@
 import React from 'react'
 
-export default function Controller({ reset, ss, bs, qs, speed, changeSpeed, size, changeSize }) {
+export default function Controller({ reset, ss, bs, qs, speed, changeSpeed, size, changeSize, is }) {
     return (
         <div className="controller">
             <button className="btn" onClick={reset}>Genereate Array</button>
             <button className="btn" onClick={bs}>Bubble Sort</button>
             <button className="btn" onClick={ss}>Selection Sort</button>
-            <button className="btn" onClick={qs}>Quicks Sort</button>
+            <button className="btn" onClick={qs}>Quick Sort</button>
+            <button className="btn" onClick={is}>Insert Sort</button>
             <div className="slider">
                 <input type="range" id="speed" name="speed" min="0" max="75" step="any"
                     value={speed}

@@ -193,6 +193,25 @@ export default function Displayer() {
         setArr(tempArr)
     }
 
+    async function insertSort() {
+        toggleSort()
+        let tempArr = [...arr]
+        let array = tempArr;
+        for (let i = 0; i < size; i++) {
+            let j = i;
+            let temp = array[j];
+            while (j > 0 && temp < array[j - 1]) {
+                array[j] = array[j - 1];
+                j -= 1;
+                await animationSwap(j, j+1)
+            }
+            array[j] = temp;
+            removeAnimation([j, j+1])
+        }
+        toggleSort()
+        setArr(tempArr)
+    }
+
     return (
         <Fragment>
             <Header />
@@ -211,6 +230,7 @@ export default function Displayer() {
                     ss={selectionSort}
                     bs={bubbleSort}
                     qs={callQuickSort}
+                    is={insertSort}
                     speed={speed}
                     changeSpeed={speedChange}
                     size={size}
