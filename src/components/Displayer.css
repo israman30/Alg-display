@@ -101,6 +101,9 @@
     font-size: x-large;
     font-weight: bold;
 }
+.far {
+    margin-right: 5px;
+}
 
 .slider {
     outline: none;

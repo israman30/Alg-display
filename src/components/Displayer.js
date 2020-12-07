@@ -219,9 +219,7 @@ export default function Displayer() {
                 <div className="columns">
                     {
                         (arr).map((el, id) => {
-                            return (
-                                <div key={id} className="column" style={{height:`${el}%`}}></div>
-                            )
+                            return <div key={id} className="column" style={{height:`${el}%`}}></div>
                         })
                     }
                 </div>
